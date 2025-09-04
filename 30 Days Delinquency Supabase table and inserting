@@ -148,7 +148,7 @@ SELECT
     CASE WHEN RIGHT(payment_history, 3) ~ '[1-9]' THEN 1 ELSE 0 END AS recent_delinquency_flag
 FROM freddie_mac_crt_raw_clean1
 WHERE current_loan_delinquency_status = '01'
-  AND LEFT(period, 4)::INT BETWEEN 2023 AND 2025
+  AND LEFT(period, 4)::INT BETWEEN 2013 AND 2025
   AND credit_score ~ '^[0-9]+$'
   AND original_loan_to_value_ltv ~ '^[0-9]+(\.[0-9]+)?$'
   AND original_debt_to_income_dti_ratio ~ '^[0-9]+(\.[0-9]+)?$'
@@ -252,7 +252,7 @@ SELECT
 FROM freddie_mac_crt_raw_clean1
 TABLESAMPLE SYSTEM (1) 
 WHERE current_loan_delinquency_status = '00'
-  AND LEFT(period, 4)::INT BETWEEN 2023 AND 2025
+  AND LEFT(period, 4)::INT BETWEEN 2013 AND 2025
   AND credit_score ~ '^[0-9]+$'
   AND original_loan_to_value_ltv ~ '^[0-9]+(\.[0-9]+)?$'
   AND original_debt_to_income_dti_ratio ~ '^[0-9]+(\.[0-9]+)?$'
