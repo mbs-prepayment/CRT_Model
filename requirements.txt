@@ -1,0 +1,21 @@
+# CRT Model 依赖包
+
+# 数据处理
+pandas==2.3.3
+numpy==2.0.2
+
+# 机器学习
+scikit-learn==1.6.1
+pygam==0.10.1
+scipy==1.13.1
+
+# 可视化
+matplotlib==3.9.4
+
+# 数据库
+supabase==2.24.0
+
+# Jupyter
+jupyter>=1.0.0
+nbconvert>=7.0.0
+
